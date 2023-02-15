@@ -79,7 +79,7 @@ Open `Image Collector` directory and Run `main.py` - Credit: Yarden Akaby
 This window will apeare:
 
 <p align="center"> 
-<img src="https://github.com/Arl2023/Estimation-of-tomato-leaves-orientation/blob/main/gui.PNG" width=50%>
+<img src="https://github.com/adico103/Estimation-of-tomato-leaves-orientation/blob/main/gui.PNG" width=50%>
 </p>
 
 
@@ -87,7 +87,7 @@ First press on UR5, Turn and Camera to make sure there is a connection with all 
 Then press on Test- this will start a program that rotates the turntable, changes the elevation angle of the robotic arm and saves the images in the experiment data folder. The files are saved as feather files under names as this example: "N14_d0.3_p0.0_r0_O0.feather" - This is an image of leaf No. 14, the distance from the robotic arm to the leaf is 0.3 m, the elevation angle of the robot is 0 degrees, the number of rotation of the turntable is 0, and the primary orientation on the mechanism is 0 (as described in my thesis). example for a saved image:
 
 <p align="center"> 
-<img src="https://github.com/Arl2023/Estimation-of-tomato-leaves-orientation/blob/main/N14_d0.3_p0.0_r8_O0new.png" width=50%>
+<img src="https://github.com/adico103/Estimation-of-tomato-leaves-orientation/blob/main/N14_d0.3_p0.0_r8_O0new.png" width=50%>
 </p>
 
 
@@ -198,14 +198,14 @@ the script plots an example (if `conf` folder) of comparing the best models (for
 
 the script plots cumulative propability graphs for the best models for 2 images model+RTD and 3 images model+RDT. to see what percent of the test samples reached under a certain error, under a certain route of the robot elevation angles. the plots are saved in `route` folder. Notice that there are many possible routs so there are a few graphs for each model (each contains 6 routs, and are numberd by the "sucseess" of these routes) for example the 6 best routs for the "3 images+RTD" model:
 <p align="center">
-<img src="https://github.com/Arl2023/Estimation-of-tomato-leaves-orientation/blob/main/Error_angle_percents_as_function_of_delta_elevation_1_Experiment_5_5.png.svg" width=50%>
+<img src="https://github.com/adico103/Estimation-of-tomato-leaves-orientation/blob/main/Error_angle_percents_as_function_of_delta_elevation_1_Experiment_5_5.png.svg" width=50%>
 </p>
 
 ### Analyze additional images contribution
 the script plots graphs to evaluate the contribution of images to existing ones, as it compares "1 imgae model", "2 images model+RTD" and "3 images model+RTD". the graphs are saved in `cont` folder (detailed explenation about the graphs is in the thesis file). example of the plot:
 
 <p align="center"> 
-<img src="https://github.com/Arl2023/Estimation-of-tomato-leaves-orientation/blob/main/cont13_impr_per%3D85.26.png" width=50%>
+<img src="https://github.com/adico103/Estimation-of-tomato-leaves-orientation/blob/main/cont13_impr_per%3D85.26.png" width=50%>
 </p>
 
 
@@ -221,13 +221,13 @@ Now for the fun part - making everything work together! - The pipeline is workin
 place the leaf in front of the robotic arm (0.5 m) and run `MainRealTime.py`, the UR5 will take 3 images of the leaf in different elevation angles, and will save the parameters of the files in `RealTime\data` folder, as well as the RGB and the green filltered image, for example:
 
 <p align="center">
-<img src="https://github.com/Arl2023/Estimation-of-tomato-leaves-orientation/blob/main/realtime1.png" width=50%>
+<img src="https://github.com/adico103/Estimation-of-tomato-leaves-orientation/blob/main/realtime1.png" width=50%>
 </p>
 
 Next, the model will evaluate the leaf normal and save an image in `RealTime\data\norm_imgs` folder:
 
 <p align="center">
-<img src="https://github.com/Arl2023/Estimation-of-tomato-leaves-orientation/blob/main/realtime2.png" width=50%>
+<img src="https://github.com/adico103/Estimation-of-tomato-leaves-orientation/blob/main/realtime2.png" width=50%>
 </p>
 
 Then the script will print the Leaf Normal Vector (in the UR5 base coordinate system), and the desired robotic end-effector pose to grasp the leaf. For Example:
