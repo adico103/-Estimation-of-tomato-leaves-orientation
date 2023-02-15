@@ -1,0 +1,10 @@
+number,model,data type
+1,Conv,Pairs
+2,ResNet,Pairs
+3,LinearModel,Contour_old
+4,OpenPose,Pairs
+5,LinearModel,combos_3
+6,select_next,NextStep
+7,LinearModel,Regular
+8,LinearModel,combos_2_no_pose
+9,LinearModel,combos_3_no_pose
